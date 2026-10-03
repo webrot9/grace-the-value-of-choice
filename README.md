@@ -1,7 +1,7 @@
 # Grace: The Value of Choice — exercises
 
-The exercises of the book *Grace: The Value of Choice* (Roberto Capobianco,
-2026). Each chapter that ends with something to build has a folder here: a
+The exercises of the book *Grace: The Value of Choice* by Roberto Capobianco
+(2026), [available on Amazon](https://www.amazon.com/dp/B0HLVYV6YK). Each chapter that ends with something to build has a folder here: a
 skeleton to fill in, the tests that check it, and the script that runs the
 experiment the chapter talks about.
 
@@ -52,5 +52,10 @@ The code is under the MIT license ([LICENSE](LICENSE)). The book is not.
 [ERRATA.md](ERRATA.md) lists the corrections made to the printed text. The
 copyright page of each copy says which revision it was printed from. To report a
 new one, open an issue on this repository.
+
+## Author
+
+Roberto Capobianco ([@webrot9](https://github.com/webrot9)) wrote and
+published the book, and owns and maintains this code.
 
 https://github.com/webrot9/grace-the-value-of-choice
