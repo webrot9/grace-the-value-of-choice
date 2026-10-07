@@ -26,7 +26,7 @@ from rl_lab.triad import (             # noqa: E402
     run, stationary_distribution, target_policy, value_error,
 )
 
-GAMMA = 0.9        # Baird uses 0.99; the README says why this one is 0.9
+GAMMA = 0.9        # Sutton & Barto use 0.99; the README says why this one is 0.9
 ALPHA = 0.05
 STEPS = 10_000
 W0 = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 10.0, 1.0])

@@ -200,8 +200,8 @@ def test_q3_expectation_operator_is_a_contraction_too():
 
 def test_q3_error_ratio_converges_to_gamma():
     """On a deterministic grid the contraction bound is attained: the ratio of
-    consecutive errors is gamma to within 1e-6, because the whole error sits on
-    one state. This is the number the figure in Part B is built on. With slip
+    consecutive errors is gamma to within 1e-6, until the error reaches zero.
+    This is the number the figure in Part B is built on. With slip
     it is not attained, and it does not have to be: see the next test."""
     for gamma in (0.5, 0.9, 0.99):
         P, R = dp.gridworld(4, 4, seed=12)

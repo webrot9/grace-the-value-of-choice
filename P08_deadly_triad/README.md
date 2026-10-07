@@ -6,7 +6,8 @@ No training and no report this week. The hour goes on Part C.
 
 Seven states, every reward zero, $V^\pi(s) = 0$ everywhere, and
 $\mathbf{w} = \mathbf{0}$ represents it exactly. There is nothing to learn.
-Semi-gradient TD(0) runs away from it anyway, to a value error of $4\times10^6$.
+Semi-gradient TD(0) runs away from it anyway, to a root-mean-square value error
+of $4\times10^6$.
 
 By the end you can name the three ingredients of the deadly triad as three
 objects in the code — a feature matrix, a state distribution, a bootstrap target
@@ -79,7 +80,7 @@ but **only above $\gamma = 0.882353$**, which the script finds by bisection.
 Below that, all three ingredients are present and nothing diverges. The triad is
 necessary, not sufficient.
 
-### Why $\gamma = 0.9$ and not Baird's 0.99
+### Why $\gamma = 0.9$ and not the 0.99 of Sutton & Barto
 
 At 0.99 the divergence is stronger ($-0.239$ against $-0.021$) and the figure is
 useless: the tabular ablation's slowest mode decays at $7\times10^{-5}$ per step

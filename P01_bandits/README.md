@@ -3,12 +3,14 @@
 **~30 min at home, 2 hours in class, ~30 min for the report.**
 
 A Bernoulli bandit is fifteen lines of numpy: no simulator, no dataset, no GPU.
-It is the first lab because the regret bounds proved in the lecture are visible
-directly in the numbers it prints.
+It is the first lab because what the lecture proved can be checked against the
+numbers it prints, and so can what it did not prove.
 
 By the end you can write greedy, explore-then-commit, $\epsilon$-greedy, UCB and
-Thompson sampling as pure selection rules, and read the three regret rates
-($T$, $T^{2/3}$, $\sqrt{T}$) off a log-log plot.
+Thompson sampling as pure selection rules, and say which regret rates a log-log
+plot of one run can show: greedy's $T$ can; the $T^{2/3}$ of explore-then-commit
+and the $\sqrt{T}$ of UCB describe how the final regret grows with $T$ (for UCB,
+on the worst instance), and one run of fixed length cannot show them.
 
 ## Part A — at home, before class
 

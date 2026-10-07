@@ -9,9 +9,8 @@ ones are the measurement.
 
 Right panel: the same statement as a number, the ratio of consecutive errors,
 which the theorem bounds by gamma. On this deterministic grid the bound is
-attained until the values become exact, because the whole error sits on the
-state farthest from the goal; with --slip 0.1 the ratio stays well below gamma,
-which the theorem allows just as well.
+attained until the values become exact; with --slip 0.1 the ratio stays well
+below gamma, which the theorem allows just as well.
 
     python experiments.py            # ~2 s, writes contraction.png
 """

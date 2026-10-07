@@ -119,10 +119,11 @@ def main() -> int:
     # Does the exploration constant matter? In the tutors' notebook it does not,
     # because `uct` takes c and then writes 2*sqrt(...). Here it does.
     print("  the exploration constant, which a hard-coded 2 would hide\n")
-    print(f"  {'c':>7} {'visits on optimal':>19} {'entropy':>9}")
-    print("  " + "-" * 39)
+    print(f"  {'c':>7} {'visits on optimal':>19} {'entropy':>9} "
+          f"{'picks optimal':>15}")
+    print("  " + "-" * 55)
     for c in (0.0, 0.5, 1.4, 3.0, 10.0):
-        fracs, ents = [], []
+        fracs, ents, hits = [], [], []
         for state, player in positions:
             good = optimal_moves(state, player)
             for seed in range(args.seeds):
@@ -130,7 +131,9 @@ def main() -> int:
                 vf = visit_fractions(root)
                 fracs.append(sum(v for m, v in vf.items() if m in good))
                 ents.append(entropy(vf.values()))
-        print(f"  {c:7.1f} {np.mean(fracs):19.3f} {np.mean(ents):9.3f}")
+                hits.append(1.0 if recommended_move(root) in good else 0.0)
+        print(f"  {c:7.1f} {np.mean(fracs):19.3f} {np.mean(ents):9.3f} "
+              f"{100 * np.mean(hits):14.1f}%")
     print()
 
     # ------------------------------------------------------------- figure

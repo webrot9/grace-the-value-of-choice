@@ -89,18 +89,20 @@ it $+\infty$ and must try everything once before looking at anything twice.
 ### The exploration constant
 
 ```
-      c   visits on optimal   entropy
-    0.0               0.629     0.443
-    0.5               0.707     0.902
-    1.4               0.565     1.464
-    3.0               0.390     1.719
-   10.0               0.314     1.785
+      c   visits on optimal   entropy   picks optimal
+    0.0               0.629     0.443           69.4%
+    0.5               0.707     0.902           83.3%
+    1.4               0.565     1.464           91.7%
+    3.0               0.390     1.719           80.6%
+   10.0               0.314     1.785           70.8%
 ```
 
-UCT only, at 200 simulations. The value everyone quotes is $\sqrt{2} \approx
-1.41$, and here it is worse than 0.5 and worse than 0. Note what is being
-measured and at what budget before concluding anything, and note that with a
-hard-coded 2 this table would be five identical rows.
+UCT only, at 200 simulations. On the share of visits, the value everyone
+quotes, $\sqrt{2} \approx 1.41$, is worse than 0.5 and worse than 0; on the
+move the search recommends it is better than both. Concentrating the visits is
+not finding the move, and with $c = 0$ more simulations do not help: change
+`iters=200` in the sweep to 800 and its "picks optimal" stays at 68.1%. Note
+that with a hard-coded 2 this table would be five identical rows.
 
 ## Part C — break it
 

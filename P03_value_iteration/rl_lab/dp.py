@@ -123,8 +123,8 @@ def error_ratios(history: np.ndarray, v_star: np.ndarray) -> np.ndarray:
 
     The contraction theorem says $\rho_k \le \gamma$ for every $k$. On the
     deterministic grid of this lab the bound is attained, $\rho_k = \gamma$
-    exactly, because the whole error sits on the single state farthest from the
-    goal; with `--slip 0.1` the ratio stays well below $\gamma$.
+    exactly, until the error reaches zero; with `--slip 0.1` the ratio stays
+    well below $\gamma$.
 
     Ratios are dropped as soon as **either** error is below $10^{-12}$. On this
     grid the error becomes exactly zero after a few sweeps, and keeping those

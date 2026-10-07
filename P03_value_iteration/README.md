@@ -51,8 +51,8 @@ zero:
     0.99   0.990000000         0.00e+00
 ```
 
-That is a property of a deterministic grid, where the whole error sits on one
-state. With `python experiments.py --slip 0.1` the ratio stays well below
+That is a property of a deterministic grid. With
+`python experiments.py --slip 0.1` the ratio stays well below
 $\gamma$, which the theorem allows just as well.
 
 Then the second table, which is the interesting one: on the deterministic grid
